@@ -1,6 +1,5 @@
-# Name : Kamesh D
-# REG NO : 212222240043
-
+Name : Kamesh D
+REG NO : 212222240043
 # MDP REPRESENTATION
 
 ## AIM:

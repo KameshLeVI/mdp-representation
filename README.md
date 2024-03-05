@@ -1,93 +1,63 @@
+# Name : Kamesh D
+# REG NO : 212222240043
+
 # MDP REPRESENTATION
 
 ## AIM:
-
-To represent a Markov Decision Process(MDP) problem in the following ways.
-
-  1. Text representation
-  2. Graphical representation
-  3. Python - Dictonary representation
-
+To represent any one real-world problem in MDP form.
 ## PROBLEM STATEMENT:
+To develop a game application the role of the agent is to promote if the level is cleared or depromote if the game is loss 
 
-### Problem Description
-
-We need to train a fish to navigate through a maze to reach a target location using reinforcement learning.
-
-### State Space
-
-1. Fish Current Position
-2. Distance to target location
-3. Obstacles
-4. Energy level of fish
-
+### State Space:
+```
+{A1,A2,A3}--> {0,1,2}
+A1--> LEVEL 1
+A2--> LEVEL 2 
+A3--> LEVEL 3
+```
 ### Sample State
+A1--> 0 --> LEVEL 1
 
-Fish Position (3, 5), distance to target 1 to units nearby obstacles.
-
-### Action Space
-
-1. Move Left
-2. Move Right
-3. Move Up
-4. Move Down
-
+### Action Space:
+```
+{W,L}-->{0,1}
+W-->True
+L-->False
+```
 ### Sample Action
+W--> 0 --> True
 
-Move Up
-
-### Reward Function
-
-1. Positive reward for getting closer
-2. Negative rewards for collide with obstacles
-
+### Reward Function:
+```
+R = { +1 , if we come closer to the winning
+       0 , if not
+```
 ### Graphical Representation
-![WhatsApp Image 2024-03-05 at 14 42 27_28954d6c](https://github.com/KameshLeVI/mdp-representation/assets/120780633/7feba70c-e580-4999-84d3-c17f07b00949)
+![WhatsApp Image 2024-03-05 at 14 46 24_99d5510e](https://github.com/KameshLeVI/mdp-representation/assets/120780633/5c4a275b-08fc-40db-8a2f-910af6157499)
 
 
 ## PYTHON REPRESENTATION:
-```python
+```
 P = {
     0:{
-        0: [(1.0,0,0.0,True)],
-        1: [(1.0,0,0.0,True)],
-        2: [(1.0,0,0.0),True]
+        0: [(0,1,1,True)],
+        1: [(1.0,0,1.0,False)]
     },
     1:{
-        0: [(1.0,0,0.0,True)],
-        1: [(1.0,1,0.0,True)],
-        2: [(1.0,2,1.0,True)]
+        0: [(0,2,1,True)],
+        1: [(1,0,1,False)]
     },
     2:{
-        0: [(1.0,1,0.0,True)],
-        1: [(1.0,1,0.0,True)],
-        2: [(1.0,1,0.0,True)]
-        
-    }
-    3:{
-        0:[(1.0,2.0,0.0,True)],
-        1:[(1.0,2,0.0,True)],
-        2:[(1.0,2.0,0.0,True)]
+        0: [(0,2,1,True)],
+        1: [(1,1,1,False)]
     }
 }
+P
 ```
 ## OUTPUT:
-```python
-{0: {0: [(1.0, 0, 0.0, True)], 1: [(1.0, 0, 0.0, True)], 
-    2: [(1.0, 0, 0.0, True)]} 
-    
- 1: {0: [(1.0, 0, 0.0, True)], 1: [(1.0, 1, 1.0, True)], 
-    2: [(1.0, 2, 0.0, True)]},
- 2: {0: [(1.0, 2, 0.0, True)], 1: [(1.0, 2, 0.0, True)], 
-    2: [(1.0, 2, 0.0, True)]},
- 3: {0: [(1.0, 1. 0.0, True)], 1: [(1.0, 1, 0.0, True)], 
-    2: [(1.0, 1, 0.0, True)]}
- }
-```
+![image](https://github.com/KameshLeVI/mdp-representation/assets/120780633/dcffe530-8eeb-4c06-b79f-4a4dfdf3cb4e)
+
+
 ## RESULT:
+Thus the given real world problem is successfully represented in a MDP form .
 
-Thus the given Markov Decision Process(MDP) problem is represented in the following ways.
-
-  1. Text representation
-  2. Graphical representation
-  3. Python - Dictonary representation
